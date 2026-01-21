@@ -1,0 +1,227 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #333;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.screen {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.subtitle {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+}
+
+.role-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.role-btn {
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    border-radius: 20px;
+    padding: 2rem 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.role-btn:hover {
+    background: white;
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.role-btn .icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.role-btn h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.role-btn p {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.elder-btn {
+    border-left: 5px solid #4CAF50;
+}
+
+.guardian-btn {
+    border-left: 5px solid #2196F3;
+}
+
+.status-info {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    backdrop-filter: blur(10px);
+}
+
+.status-info p {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    color: #555;
+}
+
+.status-info span {
+    font-weight: 600;
+    color: #333;
+}
+
+.check-in-btn {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border: none;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #4CAF50, #45a049);
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin: 0 auto 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 30px rgba(76, 175, 80, 0.3);
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.check-in-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 40px rgba(76, 175, 80, 0.4);
+}
+
+.check-in-btn:active {
+    transform: scale(0.98);
+}
+
+.pulse {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.7;
+    }
+    70% {
+        transform: translate(-50%, -50%) scale(1.4);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1.4);
+        opacity: 0;
+    }
+}
+
+.guardian-info,
+.elder-status {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    padding: 1.5rem;
+    backdrop-filter: blur(10px);
+}
+
+.guardian-info h3,
+.elder-status h3 {
+    color: #333;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+#guardianList,
+#elderList {
+    margin-bottom: 1rem;
+    color: #666;
+}
+
+.add-btn {
+    background: #2196F3;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.add-btn:hover {
+    background: #1976D2;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 480px) {
+    .container {
+        max-width: 350px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .role-btn {
+        padding: 1.5rem 1rem;
+    }
+
+    .role-btn .icon {
+        font-size: 2.5rem;
+    }
+
+    .check-in-btn {
+        width: 160px;
+        height: 160px;
+        font-size: 1.1rem;
+    }
+}

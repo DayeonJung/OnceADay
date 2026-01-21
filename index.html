@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>안부확인 - OnceADay</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- 최초 설치시 역할 선택 화면 -->
+    <div id="roleSelection" class="screen">
+        <div class="container">
+            <h1>OnceADay</h1>
+            <p class="subtitle">안부확인 서비스에 오신 것을 환영합니다</p>
+
+            <div class="role-buttons">
+                <button id="elderBtn" class="role-btn elder-btn">
+                    <div class="icon">👴</div>
+                    <h3>어르신</h3>
+                    <p>안부를 알려드리는 분</p>
+                </button>
+
+                <button id="guardianBtn" class="role-btn guardian-btn">
+                    <div class="icon">👨‍👩‍👧‍👦</div>
+                    <h3>보호자</h3>
+                    <p>안부를 확인하는 분</p>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 어르신용 메인 화면 -->
+    <div id="elderMain" class="screen hidden">
+        <div class="container">
+            <h1>안부확인</h1>
+            <div class="status-info">
+                <p>마지막 확인: <span id="lastCheck">-</span></p>
+                <p>다음 알림: <span id="nextNotification">-</span></p>
+            </div>
+
+            <button id="checkInBtn" class="check-in-btn">
+                <div class="pulse"></div>
+                안부 알리기
+            </button>
+
+            <div class="guardian-info">
+                <h3>등록된 보호자</h3>
+                <div id="guardianList">
+                    <p>등록된 보호자가 없습니다</p>
+                </div>
+                <button id="addGuardianBtn" class="add-btn">보호자 추가</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 보호자용 메인 화면 -->
+    <div id="guardianMain" class="screen hidden">
+        <div class="container">
+            <h1>보호자 대시보드</h1>
+
+            <div class="elder-status">
+                <h3>등록된 어르신</h3>
+                <div id="elderList">
+                    <p>등록된 어르신이 없습니다</p>
+                </div>
+                <button id="addElderBtn" class="add-btn">어르신 추가</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
