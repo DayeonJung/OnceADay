@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #6ba6cd 0%, #8bb8d8 50%, #b3d1e8 100%);
     color: #333;
     min-height: 100vh;
     overflow-x: hidden;
